@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Dennis Suru · Cloud & DevOps Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eef2f5;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #1e2b37;
+            padding: 2rem 1rem;
+        }
+
+        .cv-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px -10px rgba(0, 20, 40, 0.15);
+            overflow: hidden;
+            padding: 2.5rem 2.8rem;
+        }
+
+        /* header / contact */
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #cbd5e1;
+            padding-bottom: 1.8rem;
+        }
+
+        .name-title h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #0b1c2c;
+            line-height: 1.2;
+            margin-bottom: 0.3rem;
+        }
+
+        .subhead {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #2c3e50;
+            background: #e6edf4;
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            letter-spacing: 0.3px;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 0.95rem;
+            color: #1e3a5f;
+            line-height: 1.8;
+            background: #f8fafc;
+            padding: 0.8rem 1.5rem;
+            border-radius: 20px;
+        }
+
+        .contact-info a {
+            color: #1e4a7a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #94a3b8;
+        }
+
+        .contact-info a:hover {
+            color: #0f2b4b;
+            border-bottom: 1px solid #0f2b4b;
+        }
+
+        /* section headings */
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: #0b2a41;
+            margin-top: 1.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid #d0dde9;
+            display: flex;
+            align-items: center;
+        }
+
+        h2:first-of-type {
+            margin-top: 0.5rem;
+        }
+
+        /* summary */
+        .summary {
+            background: #f4f9ff;
+            padding: 1.2rem 1.6rem;
+            border-radius: 18px;
+            border-left: 6px solid #1e4a7a;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            color: #1e2b37;
+        }
+
+        /* skills list */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 0.8rem 1.8rem;
+            background: #f9fcff;
+            padding: 1.2rem 1.6rem;
+            border-radius: 18px;
+            margin-bottom: 0.5rem;
+            border: 1px solid #dbe7f0;
+        }
+
+        .skill-item {
+            font-size: 0.96rem;
+        }
+
+        .skill-item strong {
+            font-weight: 600;
+            color: #0b2a41;
+            display: inline-block;
+            min-width: 110px;
+        }
+
+        /* certifications */
+        .certs-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1rem;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .certs-list li {
+            background: #e3eef9;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #103a5c;
+            border: 1px solid #c1d6e9;
+        }
+
+        /* projects */
+        .project-item {
+            margin-bottom: 1.4rem;
+            padding-left: 0.2rem;
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #0b2a41;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 0.3rem;
+        }
+
+        .project-stack {
+            font-weight: 400;
+            font-size: 0.85rem;
+            background: #dbe7f0;
+            padding: 0.15rem 0.8rem;
+            border-radius: 30px;
+            color: #1e3a5f;
+            margin-left: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .project-item ul, .exp-item ul {
+            margin-left: 1.2rem;
+            margin-top: 0.2rem;
+            color: #1e2e3f;
+        }
+
+        .project-item li, .exp-item li {
+            margin-bottom: 0.3rem;
+            font-size: 0.96rem;
+        }
+
+        /* experience */
+        .exp-item {
+            margin-bottom: 1.6rem;
+        }
+
+        .exp-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.2rem;
+        }
+
+        .exp-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #0b2a41;
+        }
+
+        .exp-company {
+            font-weight: 600;
+            color: #2a4b6e;
+            font-size: 0.98rem;
+        }
+
+        .exp-date {
+            font-size: 0.9rem;
+            background: #ecf3fa;
+            padding: 0.1rem 0.8rem;
+            border-radius: 30px;
+            color: #1e3f62;
+            font-weight: 500;
+        }
+
+        /* education */
+        .edu-item {
+            margin-bottom: 0.8rem;
+        }
+
+        .edu-title {
+            font-weight: 700;
+            color: #0b2a41;
+            font-size: 1rem;
+        }
+
+        .edu-detail {
+            color: #1e3a5f;
+            font-size: 0.95rem;
+        }
+
+        /* utility */
+        .divider-light {
+            height: 1px;
+            background: #d9e2ec;
+            margin: 1.2rem 0;
+        }
+
+        /* responsive */
+        @media (max-width: 700px) {
+            .cv-container {
+                padding: 1.8rem 1.4rem;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-info {
+                text-align: left;
+                width: 100%;
+                padding: 0.8rem 1rem;
+            }
+
+            .name-title h1 {
+                font-size: 2.2rem;
+            }
+
+            .project-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.2rem;
+            }
+
+            .project-stack {
+                margin-left: 0;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 0.8rem 0.5rem;
+            }
+
+            .cv-container {
+                padding: 1.2rem;
+            }
+
+            .subhead {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="name-title">
+                <h1>SAMUEL DENNIS SURU</h1>
+                <div class="subhead">Cloud & DevOps Engineer | Linux Systems Administrator</div>
+            </div>
+            <div class="contact-info">
+                📍 Abuja, Nigeria<br>
+                ✉️ <a href="mailto:sam.dben@gmail.com">sam.dben@gmail.com</a><br>
+                📞 +2348064133285<br>
+                <span style="font-size:0.9rem;">🔗 <a href="https://linkedin.com/in/samuel-suru" target="_blank">linkedin.com/in/samuel-suru</a> · <a href="https://github.com/dben11" target="_blank">github.com/dben11</a></span>
+            </div>
+        </div>
+
+        <!-- PROFESSIONAL SUMMARY -->
+        <h2>PROFESSIONAL SUMMARY</h2>
+        <div class="summary">
+            Cloud and DevOps Engineer with a strong foundation in Linux systems, virtualization (KVM/VMware), and AWS cloud architecture. Experienced in designing secure network topologies (VPCs, subnets, routing), automating infrastructure as code (Terraform), and building containerized CI/CD pipelines. Passionate about bridging the gap between traditional systems administration and modern, automated cloud-native environments to deliver secure, scalable, and repeatable solutions.
+        </div>
+
+        <!-- TECHNICAL SKILLS -->
+        <h2>TECHNICAL SKILLS</h2>
+        <div class="skills-grid">
+            <div class="skill-item"><strong>Cloud Platforms:</strong> AWS (EC2, VPC, IAM, S3, ECR, ALB, DynamoDB, CloudWatch)</div>
+            <div class="skill-item"><strong>DevOps & IaC:</strong> Terraform, Docker, GitHub Actions (CI/CD), Ansible, Git</div>
+            <div class="skill-item"><strong>Operating Systems:</strong> Linux (Ubuntu, Debian)</div>
+            <div class="skill-item"><strong>Virtualization:</strong> KVM/QEMU, VMware, VirtualBox, libvirt (Hypervisor management)</div>
+            <div class="skill-item"><strong>Networking:</strong> VPC Design, Subnetting (CIDR), Security Groups, DNS, DHCP, VPN, TCP/IP</div>
+            <div class="skill-item"><strong>Scripting & Automation:</strong> Bash, Python (basic), PowerShell (basic)</div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <h2>CERTIFICATIONS</h2>
+        <ul class="certs-list">
+            <li>Kubernetes — Linux Foundation</li>
+            <li>Linux System Administrator — Credly</li>
+            <li>Cloud Computing — Linux Foundation</li>
+            <li>System Networking — Cybrary (2023)</li>
+            <li>Software Engineering Certificate — ALX School</li>
+        </ul>
+
+        <!-- PROJECTS -->
+        <h2>PROJECTS</h2>
+
+        <div class="project-item">
+            <div class="project-title">
+                Production-Ready Web App Deployment (AWS)
+                <span class="project-stack">Terraform, AWS, Docker, GitHub Actions</span>
+            </div>
+            <ul>
+                <li>Designed a highly available AWS architecture utilizing a custom VPC with public and private subnets to isolate compute resources from the public internet.</li>
+                <li>Wrote modular Terraform code to provision all infrastructure (VPC, Subnets, Route Tables, IAM Roles), ensuring repeatable deployments and remote state management.</li>
+                <li>Containerized a web application using Docker and built a CI/CD pipeline in GitHub Actions to automatically build, test, and push the image to AWS ECR.</li>
+                <li>Utilized AWS Systems Manager (SSM) to trigger automated deployments on the EC2 instance, eliminating the need for open SSH ports.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">
+                Automated Server Provisioning & Configuration
+                <span class="project-stack">Ansible, Bash, Git, AWS EC2</span>
+            </div>
+            <ul>
+                <li>Wrote reusable Ansible playbooks to automate the provisioning and configuration of Linux servers on AWS EC2.</li>
+                <li>Automated package installation, user creation, and firewall (UFW/iptables) rules, reducing manual deployment time from hours to minutes.</li>
+                <li>Integrated Ansible with Terraform to ensure new EC2 instances were automatically configured upon boot.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">
+                Happy Pets – Full Stack Application Deployment
+                <span class="project-stack">Django, PostgreSQL, Docker, Nginx</span>
+            </div>
+            <ul>
+                <li>Deployed a pet-care booking system using Docker and Docker Compose on a Linux server.</li>
+                <li>Configured Nginx as a reverse proxy to route traffic to the Django application and secured the environment with SSL/TLS encryption.</li>
+            </ul>
+        </div>
+
+        <!-- WORK EXPERIENCE -->
+        <h2>WORK EXPERIENCE</h2>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-title">Freelance Cloud & System Administrator</span>
+                <span class="exp-date">2023 – Present</span>
+            </div>
+            <div class="exp-company">Remote</div>
+            <ul>
+                <li>Administer Linux servers in cloud and on-premises environments, maintaining a 99.9% uptime SLA.</li>
+                <li>Provision, clone, and live-migrate virtual machines using KVM/QEMU, libvirt, and VMware, optimizing resource allocation.</li>
+                <li>Automate routine system administration tasks (backups, log rotation) using Bash and Cron, reducing manual operational overhead.</li>
+                <li>Configure and secure network infrastructure, including firewalls, DNS, and VPNs, ensuring data integrity and secure remote access.</li>
+                <li>Document standard operating procedures (SOPs) and mentor junior administrators on Linux best practices.</li>
+            </ul>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-title">System Administrator</span>
+                <span class="exp-date">2022 – 2023</span>
+            </div>
+            <div class="exp-company">Festus Tiller Inspirations · Edo State, Nigeria</div>
+            <ul>
+                <li>Installed, configured, and maintained physical Linux and Windows servers, ensuring high availability for internal teams.</li>
+                <li>Set up and secured local network infrastructure (switches, routers, access points), troubleshooting connectivity issues.</li>
+                <li>Managed automated backups, OS patching, and strict user access controls (RBAC) to protect company data.</li>
+                <li>Provided Tier-1 support, resolving hardware and network issues to minimize downtime.</li>
+            </ul>
+        </div>
+
+        <!-- EDUCATION -->
+        <h2>EDUCATION</h2>
+        <div class="edu-item">
+            <div class="edu-title">Federal Polytechnic Auchi</div>
+            <div class="edu-detail">Higher National Diploma (HND) – Electrical Electronics Engineering (Telecommunication)</div>
+            <div class="edu-detail">National Diploma (ND) – Electrical Electronics Engineering</div>
+        </div>
+    </div>
+</body>
+</html>

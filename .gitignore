@@ -1,0 +1,12 @@
+# Terraform state and crash logs
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Terraform variables (may contain secrets)
+*.tfvars
+*.tfvars.json
+
+# Terraform CLI config
+.terraform/
+.terraform.lock.hcl
